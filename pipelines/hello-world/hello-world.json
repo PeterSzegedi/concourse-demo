@@ -1,0 +1,27 @@
+{
+  "jobs": [
+    {
+      "name": "hello-world-job",
+      "plan": [
+        {
+          "task": "hello-world-task",
+          "config": {
+            "platform": "linux",
+            "image_resource": {
+              "type": "registry-image",
+              "source": {
+                "repository": "ubuntu"
+              }
+            },
+            "run": {
+              "path": "echo",
+              "args": [
+                "hello-world!"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
